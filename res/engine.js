@@ -24,6 +24,10 @@ $("#deleteData").click(function(e){
   localStorage.removeItem("glord-data");
   money=0,item1=10,item2=0,item3=0,item4=0,item5=0,item6=0,manager1=0,manager2=0,manager3=0;
 });
+$("#newItemReset").click(function(e){
+  e.preventDefault();
+  item4=0,item5=0,item6=0;
+});
 //Manual Churning
 $("#addonebtn").click(function(e){
   e.preventDefault();
