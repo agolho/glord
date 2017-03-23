@@ -18,6 +18,12 @@ setInterval(autoSave, 1000);
 function autoSave(){
   localStorage.setItem("glord-data",[Math.round(money),Math.round(item1),Math.round(item2),Math.round(item3),Math.round(manager1),Math.round(manager2),Math.round(manager3)]);
 }
+//Delete
+$("#deleteData").click(function(e){
+  e.preventDefault();
+  localStorage.removeItem("glord-data");
+  money=0,item1=10,item2=0,item3=0,manager1=0,manager2=0,manager3=0;
+});
 //Manual Churning
 $("#addonebtn").click(function(e){
   e.preventDefault();
