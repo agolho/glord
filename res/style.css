@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans');
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: small;
+  margin:1em;
+}
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  margin: 0 auto;
+  max-width: 50em;
+
+}
+.reded{
+  background-color: #00534f;
+  color: white;
+}
+.btn-group{
+  margin:2px;
+}
+.btn-display{
+pointer-events: none;
+}
