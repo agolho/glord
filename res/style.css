@@ -33,3 +33,9 @@ body{
 .btn-display{
 pointer-events: none;
 }
+.btn{
+  font-size: xx-small;
+}
+.btn-lg{
+  font-size: large;
+}

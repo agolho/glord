@@ -1,14 +1,14 @@
-var money,item1,item2,item3,manager1,manager2,manager3 = new Number();
+var money,item1,item2,item3,item4,item5,item6,manager1,manager2,manager3 = new Number();
 var Data = localStorage.getItem("glord-data");
 //These all were dutluk, next time they will be using something delicious nomoomonomonom!
 //Kookiies
 if (Data == null){
 
-  money=0,item1=10,item2=0,item3=0,manager1=0,manager2=0,manager3=0;
+  money=0,item1=10,item2=0,item3=0,item4=0,item5=0,item6=0,manager1=0,manager2=0,manager3=0;
   localStorage.setItem("glord-data",[[money,item1,item2,item3,manager1,manager2,manager3]]);
 } else {
   var arrayed = Data.split(',');
-  money=Math.round(arrayed[0]),item1=Math.round(arrayed[1]),item2 = Math.round(arrayed[2]),item3=Math.round(arrayed[3]),manager1=Math.round(arrayed[4]),manager2=Math.round(arrayed[5]),manager3=Math.round(arrayed[6]);
+  money=Math.round(arrayed[0]),item1=Math.round(arrayed[1]),item2 = Math.round(arrayed[2]),item3=Math.round(arrayed[3]),manager1=Math.round(arrayed[4]),manager2=Math.round(arrayed[5]),manager3=Math.round(arrayed[6]),item4=Math.round(arrayed[7]),item5 = Math.round(arrayed[8]),item6=Math.round(arrayed[9]);
 }
 //Initializing
 setInterval(numbermaster5k, 1000);
@@ -16,13 +16,13 @@ setInterval(purchaseable, 250);
 setInterval(autoSave, 1000);
 //Autosave
 function autoSave(){
-  localStorage.setItem("glord-data",[Math.round(money),Math.round(item1),Math.round(item2),Math.round(item3),Math.round(manager1),Math.round(manager2),Math.round(manager3)]);
+  localStorage.setItem("glord-data",[Math.round(money),Math.round(item1),Math.round(item2),Math.round(item3),Math.round(manager1),Math.round(manager2),Math.round(manager3),Math.round(item4),Math.round(item5),Math.round(item6)]);
 }
 //Delete
 $("#deleteData").click(function(e){
   e.preventDefault();
   localStorage.removeItem("glord-data");
-  money=0,item1=10,item2=0,item3=0,manager1=0,manager2=0,manager3=0;
+  money=0,item1=10,item2=0,item3=0,item4=0,item5=0,item6=0,manager1=0,manager2=0,manager3=0;
 });
 //Manual Churning
 $("#addonebtn").click(function(e){
@@ -43,7 +43,10 @@ function writer(){
   $("#item1").html('<i class="fa fa-certificate"></i> '+item1);
   $("#item2").html('<i class="fa fa-cube"></i> '+item2);
   $("#item3").html('<i class="fa fa-eercast"></i> '+item3);
-  if(manager1==1) $("#manager1").html('HIRED 1hap/sn');
+  $("#item4").html('<i class="fa fa-bolt"></i> '+item4);
+  $("#item5").html('<i class="fa fa-bomb"></i> '+item5);
+  $("#item6").html('<i class="fa fa-eye"></i> '+item6);
+  if(manager1==1) $("#manager1").html('<i class="fa fa-certificate"></i>Çalışıyor Gevşek Süleyman 1hap/sn');
   var rounded=Math.round(money);
   if(rounded<999999){
     banksy('GEARS',rounded);
@@ -63,6 +66,12 @@ var item2buy = document.getElementById("item2buy");
 var item2sell = document.getElementById("item2sell");
 var item3buy = document.getElementById("item3buy");
 var item3sell = document.getElementById("item3sell");
+var item4buy = document.getElementById("item4buy");
+var item4sell = document.getElementById("item4sell");
+var item5buy = document.getElementById("item5buy");
+var item5sell = document.getElementById("item5sell");
+var item6buy = document.getElementById("item6buy");
+var item6sell = document.getElementById("item6sell");
 var managerbutton1 = document.getElementById("manager1");
 function purchaseable(){
   if (money>=100){
@@ -101,6 +110,42 @@ function purchaseable(){
       else {
       item3sell.disabled = true;
       }
+      if (money>=130000){
+          item4buy.disabled = false;
+          }
+          else {
+            item4buy.disabled = true;
+          }
+      if (item4>0){
+          item4sell.disabled = false;
+          }
+          else {
+          item4sell.disabled = true;
+          }
+      if (money>=1400000){
+          item5buy.disabled = false;
+          }
+          else {
+            item5buy.disabled = true;
+          }
+      if (item5>0){
+          item5sell.disabled = false;
+          }
+          else {
+          item5sell.disabled = true;
+          }
+      if (money>=20000000){
+          item6buy.disabled = false;
+          }
+          else {
+            item6buy.disabled = true;
+          }
+      if (item6>0){
+          item6sell.disabled = false;
+          }
+          else {
+          item6sell.disabled = true;
+          }
   if (money>1000000){
       managerbutton1.disabled = false;
       }
@@ -154,6 +199,54 @@ $("#item3buy").click(function(e){
   if (money>=12000){
     item3+=10;
     money-=12000;
+  }
+  writer();
+});
+$("#item4sell").click(function(e){
+  e.preventDefault();
+  if (item4>0){
+    item4--;
+    money+=14000;
+  }
+  writer();
+});
+$("#item4buy").click(function(e){
+  e.preventDefault();
+  if (money>=130000){
+    item4+=10;
+    money-=130000;
+  }
+  writer();
+});
+$("#item5sell").click(function(e){
+  e.preventDefault();
+  if (item5>0){
+    item5--;
+    money+=150000;
+  }
+  writer();
+});
+$("#item5buy").click(function(e){
+  e.preventDefault();
+  if (money>=1400000){
+    item5+=10;
+    money-=1400000;
+  }
+  writer();
+});
+$("#item6sell").click(function(e){
+  e.preventDefault();
+  if (item6>0){
+    item6--;
+    money+=2100000;
+  }
+  writer();
+});
+$("#item6buy").click(function(e){
+  e.preventDefault();
+  if (money>=20000000){
+    item6+=10;
+    money-=20000000;
   }
   writer();
 });
