@@ -21,8 +21,11 @@ body{
 
 }
 .reded{
-  background-color: #00534f;
+  background-color: #ef534f;
   color: white;
+}
+.reded:active{
+  background-color: #ef504f;
 }
 .btn-group{
   margin:2px;

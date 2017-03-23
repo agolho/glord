@@ -39,7 +39,7 @@ function writer(){
   $("#item3").html('<i class="fa fa-eercast"></i> '+item3);
   if(manager1==1) $("#manager1").html('HIRED 1hap/sn');
   var rounded=Math.round(money);
-  if(rounded<999){
+  if(rounded<999999){
     banksy('GEARS',rounded);
   } else {
     var abbrivated=numeral(rounded).format('0.0a');

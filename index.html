@@ -14,10 +14,12 @@
 		<div class="col-md-12">
 			<div class="well text-center">
 			<h2 class="title">GLORD<h2>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
         Torbacılar
         </button>
-        <p>Another Incremental Game. Tweet at <a href="https://twitter.com/ysfbekts"><i class="fa fa-twitter"></i> ysfbekts</a></p>
+        <button type="button" class="btn btn-default " data-toggle="modal" data-target="#myModal2">
+        Ayarlar
+        </button>
       </div>
       <h1 id="addonebtn" class="well well-lg reded title text-center">
         <div class="jtron">
@@ -87,20 +89,37 @@
       </div>
       <div class="modal-body">
         <div class="text-center">
-          <div>
-          <button id="manager1" class="btn btn-block btn-warning"><i class="fa fa-certificate"></i> Gevşek Süleyman $1M · 1 hap/sn</button>
-        </div> <br>
-          <div>
-          <button id="manager2" class="btn btn-block disabled btn-info"><i class="fa fa-cube"></i> Çakal Furkan $10M · 1 küp/sn</button>
-          </div>
-          <br>
-            <div>
-            <button id="manager3" class="btn btn-block disabled btn-success"><i class="fa fa-eercast"></i> Dümen Yusuf $20M · 1 torba/sn</button>
-            </div>
+          <button id="manager1" class="btn btn-block btn-lg btn-warning"><i class="fa fa-certificate"></i> Gevşek Süleyman $1M · 1 hap/sn</button>
+
+          <button id="manager2" class="btn btn-block btn-lg disabled btn-info"><i class="fa fa-cube"></i> Çakal Furkan $10M · 1 küp/sn</button>
+
+            <button id="manager3" class="btn btn-block btn-lg disabled btn-success"><i class="fa fa-eercast"></i> Dümen Yusuf $20M · 1 torba/sn</button>
+
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ayarlar</h4>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-lg btn-block btn-danger">Tüm Verileri Sil</button>
+        <button class="btn btn-lg btn-block btn-info">Oyunu Kaydet</button>
+        <div class="text-center">
+           <p>Another Incremental Game. Tweet at <a href="https://twitter.com/ysfbekts"><i class="fa fa-twitter"></i> ysfbekts</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
       </div>
     </div>
   </div>
