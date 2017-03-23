@@ -39,3 +39,7 @@ pointer-events: none;
 .btn-lg{
   font-size: large;
 }
+.btn-head{
+  font-size: medium;
+  margin: 1px;
+}
