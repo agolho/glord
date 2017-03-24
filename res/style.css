@@ -33,7 +33,7 @@ body{
 .btn-display{
 pointer-events: none;
 }
-.btn{
+.btn-sb{
   font-size: xx-small;
 }
 .btn-lg{
