@@ -1,6 +1,15 @@
 var money,item1,item2,item3,item4,item5,item6,manager1,manager2,manager3,manager4,manager5,manager6 = new Number();
 var Data = localStorage.getItem("glord-data");
 //These all were dutluk, next time they will be using something delicious nomoomonomonom!
+//Analytics Code
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90937432-4', 'auto');
+  ga('send', 'pageview');
+
 //Kookiies
 if (Data == null){
 
