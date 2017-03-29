@@ -34,7 +34,7 @@ body{
 pointer-events: none;
 }
 .btn-sb{
-  font-size: xx-small;
+  
 }
 .btn-lg{
   font-size: large;
@@ -42,4 +42,7 @@ pointer-events: none;
 .btn-head{
   font-size: medium;
   margin: 1px;
+}
+.modal-open[style] {
+padding-right: 0px !important;
 }

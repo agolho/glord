@@ -68,7 +68,7 @@ function writer(){
   if(manager2==1) $("#manager2").html('<i class="fa fa-cube"></i> Çalışıyor Çakal Furkan · 1 küp/sn');
   if(manager3==1) $("#manager3").html('<i class="fa fa-eercast"></i> Çalışıyor Dümen Yusuf · 1 torba/sn');
   if(manager4==1) $("#manager4").html('<i class="fa fa-bolt"></i> Çalışıyor Arap Lawrence · 1 bolt/sn');
-  if(manager5==1) $("#manager5").html('<i class="fa fa-bomb"></i> Charles Ponzi · 1 bomba/sn');
+  if(manager5==1) $("#manager5").html('<i class="fa fa-bomb"></i> Çalışıyor Tatar Eldar · 1 bomba/sn');
   if(manager6==1) $("#manager6").html('<i class="fa fa-eye"></i> Çalışıyor Sülün Osman · 1 nirvana/sn');
 
   var rounded=Math.round(money);
@@ -314,17 +314,15 @@ $("#item6buy").click(function(e){
 //Manager Purchase
 $("#manager1").click(function(e){
   e.preventDefault();
-  if(manager1=0){
-    if (money>=1000000){
+  if(manager1==0){
       manager1=1;
       money-=1000000;
-    }
     writer();
   }
 });
 $("#manager2").click(function(e){
   e.preventDefault();
-  if(manager2=0){
+  if(manager2==0){
   if (money>=5000000){
     manager2=1;
     money-=5000000;
@@ -334,7 +332,7 @@ $("#manager2").click(function(e){
 });
 $("#manager3").click(function(e){
   e.preventDefault();
-  if(manager3=0){
+  if(manager3==0){
   if (money>=10000000){
     manager3=1;
     money-=10000000;
@@ -344,7 +342,7 @@ $("#manager3").click(function(e){
 });
 $("#manager4").click(function(e){
   e.preventDefault();
-  if(manager4=0){
+  if(manager4==0){
   if (money>=2000000){
     manager4=1;
     money-=2000000;
@@ -354,7 +352,7 @@ $("#manager4").click(function(e){
 });
 $("#manager5").click(function(e){
   e.preventDefault();
-  if(manager5=0){
+  if(manager5==0){
   if (money>=4000000){
     manager5=1;
     money-=4000000;
@@ -364,7 +362,7 @@ $("#manager5").click(function(e){
 });
 $("#manager6").click(function(e){
   e.preventDefault();
-  if(manager6=0){
+  if(manager6==0){
   if (money>=8000000){
     manager6=1;
     money-=8000000;
